@@ -6,7 +6,7 @@ Agnieszka Szulc, 106526, agnieszka.szulc@student.put.poznan.pl
 
 ### Opis projektu:
 
-Aplikacja MeSH-pl jest aplikacją desktopową. Jej głównym zadaniem jest indeksowanie i wyszukiwanie w tekście pojęć ze słownika MeSH.pl  Użytkownik może wprowadzić do aplikacji adres URL strony którą chce zaindeksować. Program przeszukuje tekst zawarty na stronie www po czym indeksuje witrynę razem ze znalezionymi słowami kluczowymi. Użytkownik może też wprowadzać własne słowa kluczowe do wyszukiwania oraz przeglądać bazę danych w poszukiwaniu zaindeksowanych już stron i terminów. Aplikacja może zostać wykorzystana na przykład jako lokalna baza artykułów powiązanych z określonymi dziedzinami medycznymi.
+Aplikacja MeSH-pl to aplikacja webowa. Jej głównym zadaniem jest indeksowanie i wyszukiwanie w tekście pojęć ze słownika MeSH.pl  Użytkownik może wprowadzić do aplikacji adres URL strony którą chce zaindeksować. Program przeszukuje tekst zawarty na stronie www po czym indeksuje witrynę razem ze znalezionymi słowami kluczowymi. Użytkownik może też wprowadzać własne słowa kluczowe do wyszukiwania oraz przeglądać bazę danych w poszukiwaniu zaindeksowanych już stron i terminów. Aplikacja może zostać wykorzystana na przykład jako lokalna baza artykułów powiązanych z określonymi dziedzinami medycznymi.
 
 ### Założona funkcjonalność po pierwszym etapie:
 - Przyjmowanie adresu URL - użytkownik wprowadza adres strony/artykułu który chce zaindeksować
