@@ -22,7 +22,7 @@ Aplikacja MeSH-pl jest aplikacją desktopową. Jej głównym zadaniem jest indek
 Aplikacja Internetowa będzie, zgodnie ze standardem, podzielona na dwie główne części: back-end i front-end. Back-end to, patrząc całościowo, model aplikacji. Do niego należy zarządzanie bazą danych, w tym wyszukiwanie haseł i zwracanie wyników, oraz główna część aplikacji, czyli przeglądanie stron internetowych w poszukiwaniu słów kluczowych oraz indeksowanie wprowadzanych adresów.
 Front-end pełni rolę zarówno widoku jak i kontrolera. Wyświetla użytkownikowi dane otrzymane z części połączonej z bazą danych, ale też pośredniczy w komunikacji między człowiekiem a serwerem aplikacji.
 Główną częścią back-endu, poza bazą danych, będą skrypty pisane w Ruby on Rails odpowiadające za połączenie z bazą danych, zarządzanie nią, wyszukiwanie w niej treści oraz ich dodawanie, usuwanie i modyfikacje oraz przekazywanie wyników w formie API.
-Front-end to JavaScript wraz z frameworkami jQuery i Angular.js które będą pełnić zarówno opcję pośrednika między Railsowym zapleczem a widokiem, którego podstawę będzie tworzyłą strona WWW wykonana za pomocą technologii HTML5 i CSS3.
+Front-end to JavaScript wraz z frameworkami jQuery i Angular.js które będą pełnić zarówno opcję pośrednika między Railsowym zapleczem a widokiem, którego podstawę będzie tworzyła strona WWW wykonana za pomocą technologii HTML5 i CSS3.
 ### Podział zadań w zespole:
 
 #### Agnieszka Szulc:
