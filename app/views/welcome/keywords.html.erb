@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Baza słów kluczowych</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+	<div id="container">
+	<div id="container1">
+		<div id="header">
+			<h1>MeSH-pl</h1>
+		</div>
+		
+		<div id="menu">
+			<ul><li><%= link_to 'Strona główna', root_path %></li>
+			<li><%= link_to 'Zaindeksowane strony', sites_path(@sites) %></li>
+			<li><%= link_to 'Baza słów kluczowych', keywords_path(@keywords) %></li>
+			</ul>
+		</div>
+	</div>		
+		<div id="list">
+			Lista słów kluczowych
+			<ul><li>Przykładowy element listy</li></ul>	
+		</div>
+		
+		<div id="textbox1"
+			<form action="...">
+				<input type="text" name="..." value="Nowe słowo klucz">
+			</form>
+		</div>
+			
+		<div id="button1">
+			<button type="submit">Dodaj słowo klucz do bazy danych</button>
+		</div>
+		
+		<div id="footer">
+			Maciej Kaczor, 106617
+			<br>Agnieszka Szulc, 106526</br>
+		</div>
+	</div>
+	</body>
+</html>
