@@ -41,3 +41,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'httparty'
+gem 'mongoid'
