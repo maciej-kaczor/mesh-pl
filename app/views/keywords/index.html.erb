@@ -1,0 +1,21 @@
+		<div id="textbox1">
+			<%= form_for :keyword, url: keywords_path do |f| %>
+				<%= f.label :content %>&nbsp;
+				<%= f.text_field :content %>&nbsp;
+				<%= f.submit 'Dodaj' %>
+			<% end %>
+		</div>
+		<div id="list">
+			<% if @keywords.size == 0 %>
+			<h4>
+				Brak słów kluczowych
+			</h4>
+			<% else %>
+			<ul>
+				<% @keywords.each do |word| %>
+					<li><span><%= word.content %></span> <span><%= button_to "Usuń", word, method: :delete, style: "display: inline" %></span></li>
+				<% end %>
+				</ul>
+			<% end %>
+		</div>					
+	</div>

@@ -1,4 +1,4 @@
 class Keyword
   include Mongoid::Document
-  field :keyword, type: String
+  field :content, type: String
 end

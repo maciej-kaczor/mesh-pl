@@ -3,12 +3,28 @@
 <head>
   <title>MeshPl</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="container">
+	<div id="container1">
+		<div id="header">
+			<h1>MeSH-pl</h1>
+		</div>
+		
+		<div id="menu">
+			<ul><li><%= link_to 'Strona główna', root_path %></li>
+			<li><%= link_to 'Zaindeksowane strony', articles_path(@articles) %></li>
+			<li><%= link_to 'Baza słów kluczowych', keywords_path(@keywords) %></li>
+			</ul>
+		</div>
+	</div>		
 
 <%= yield %>
-
-</body>
+		<div id="footer">
+			Maciej Kaczor, 106617
+			<br>Agnieszka Szulc, 106526</br>
+		</div>
+</div>
+		</body>
 </html>

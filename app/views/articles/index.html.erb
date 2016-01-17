@@ -1,0 +1,21 @@
+		<!-- <h1>articles</h1> -->
+		<div id="textbox1">
+			<%= form_for :article, url: articles_path do |f| %>
+				<%= f.label :url %>&nbsp;
+				<%= f.text_field :url %>&nbsp;
+				<%= f.submit 'Dodaj' %>
+			<% end %>
+		</div>
+		<div id="list">
+			<% if @articles.size == 0 %>
+			<h4>
+				Brak zaindeksowanych adresów
+			</h4>
+			<% else %>
+			<ul>
+				<% @articles.each do |article| %>
+					<li><span><%= article.url %></span> <span><%= button_to "Usuń", article, method: :delete, style: "display: inline" %></span></li>
+				<% end %>
+				</ul>
+			<% end %>
+		</div>
