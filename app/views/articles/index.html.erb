@@ -1,9 +1,9 @@
 		<!-- <h1>articles</h1> -->
-		<div id="textbox1">
+		<div>
 			<%= form_for :article, url: articles_path do |f| %>
-				<%= f.label :url %>&nbsp;
-				<%= f.text_field :url %>&nbsp;
-				<%= f.submit 'Dodaj' %>
+				<!-- <%= f.label :url %> &nbsp; -->
+				<%= f.text_field :url, class:"textbox1", value:"Adres URL" %>&nbsp;
+				<br><%= f.submit 'Dodaj', class:"button2" %></br>
 			<% end %>
 		</div>
 		<div id="list">
@@ -14,7 +14,7 @@
 			<% else %>
 			<ul>
 				<% @articles.each do |article| %>
-					<li><span><%= article.url %></span> <span><%= button_to "Usuń", article, method: :delete, style: "display: inline" %></span></li>
+					<li><%= article.url %> <%= button_to "Usuń", article, method: :delete, style: "display: inline" %></li>
 				<% end %>
 				</ul>
 			<% end %>
