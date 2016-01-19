@@ -114,6 +114,8 @@ GEM
     sunspot (2.2.2)
       pr_geohash (~> 1.0)
       rsolr (~> 1.0.7)
+    sunspot_mongo (1.2.1)
+      sunspot_rails
     sunspot_rails (2.2.2)
       nokogiri
       rails (>= 3)
@@ -145,6 +147,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   sqlite3
+  sunspot_mongo
   sunspot_rails
   sunspot_solr
   turbolinks

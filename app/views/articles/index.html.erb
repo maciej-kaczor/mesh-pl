@@ -6,6 +6,9 @@
 				<%= f.submit 'Dodaj' %>
 			<% end %>
 		</div>
+		<div id="notice">
+			<%= notice %>	
+		</div>
 		<div id="list">
 			<% if @articles.size == 0 %>
 			<h4>
