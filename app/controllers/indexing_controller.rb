@@ -1,6 +1,9 @@
 class IndexingController < ApplicationController
+  def show
+    
+  end
   
-  def index
+  def performIndexing
     articles = Article.all
     keywords = Keyword.all
     
