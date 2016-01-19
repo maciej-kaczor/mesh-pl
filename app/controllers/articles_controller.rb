@@ -9,19 +9,12 @@ class ArticlesController < ApplicationController
 		@pa = params[:article]
 		@newArticle = Article.new()
 		@newArticle.url = @pa[:url]
-		#response = HTTParty.get(@newArticle.url, :verify => false)
-		@newWebsite = Website.new()
-		@str = "alergologia"
-		@newWebsite.content = @str
-		if @newWebsite.save
-		  search = Website.solr_search do
-		    fulltext 'alerg*'
-		  end
-		end
+		response = HTTParty.get(@newArticle.url, :verify => false)
+		@newArticle.content = response
 		
 		if @newArticle.save
 		  
-		  redirect_to articles_path, notice: search.results and return
+		  redirect_to articles_path, notice: "Artykuł dodany!" and return
 		end
 
 	end
