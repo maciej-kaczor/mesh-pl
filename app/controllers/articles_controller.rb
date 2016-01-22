@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 		@newArticle.url = @pa[:url]
 		response = HTTParty.get(@newArticle.url, :verify => false)
 		@newArticle.content = response
+		@newArticle.keywords = []
 		
 		if @newArticle.save
 		  
@@ -28,7 +29,7 @@ class ArticlesController < ApplicationController
 	
 	def search
 	  @keyword = params[:keyword]
-	  @articles = Article.where("keywords.keyword.content" =>@keyword)
+	  @articles = Article.where("keywords" =>@keyword)
 	end
 		
 

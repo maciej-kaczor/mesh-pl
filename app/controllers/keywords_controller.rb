@@ -16,8 +16,14 @@ class KeywordsController < ApplicationController
 	
 	def destroy
 		@word = Keyword.find(params[:id])
-		@word.destroy
-
+	  if @word.present?
+	    @articles = Article.where(:keywords => @word.content)
+      @articles.each do |article|
+        article.keywords.delete(@word.content)
+        article.save
+      end
+		  @word.destroy
+		end
 		redirect_to keywords_path, notice: "Słowo zostało usunięte." and return
   end
 end

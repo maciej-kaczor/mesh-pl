@@ -13,7 +13,7 @@ class IndexingController < ApplicationController
         fulltext keyword.content
       end
       search.each_hit_with_result do |hit, article|
-        article.keywords << keyword
+        article.keywords << keyword.content unless article.keywords.include?(keyword.content)
         article.save
       end
     end
