@@ -1,13 +1,12 @@
-		<!-- <h1>articles</h1> -->
-		<div id="textbox1">
-			<%= form_for :article, url: articles_path do |f| %>
-				<%= f.label :url %>&nbsp;
-				<%= f.text_field :url %>&nbsp;
-				<%= f.submit 'Dodaj' %>
-			<% end %>
+<div id="content">
+				Podaj adres URL strony, którą chcesz zaindeksować
 		</div>
-		<div id="notice">
-			<%= notice %>	
+		<div>
+			<%= form_for :article, url: articles_path do |f| %>
+				<!-- <%= f.label :url %> &nbsp; -->
+				<%= f.text_field :url, class:"textbox", value:"Adres URL" %>
+				<br><%= f.submit 'Dodaj', class:"button" %></br>
+			<% end %>
 		</div>
 		<div id="list">
 			<% if @articles.size == 0 %>
@@ -17,7 +16,10 @@
 			<% else %>
 			<ul>
 				<% @articles.each do |article| %>
-					<li><span><%= article.url %></span> <span><%= button_to "Usuń", article, method: :delete, style: "display: inline" %></span></li>
+					<li><%= article.url %> <%= button_to "Usuń", article, method: :delete, style: "display: inline" %> </li>
+					<%= article.keywords.each do |keyword| %>
+						<li><%= keyword.content %></li>
+					<% end %>
 				<% end %>
 				</ul>
 			<% end %>

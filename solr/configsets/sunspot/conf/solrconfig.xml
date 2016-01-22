@@ -45,7 +45,7 @@
        configuration.
     -->
   <dataDir>${solr.data.dir:}</dataDir>
-
+  
 
   <!-- The DirectoryFactory to use for indexes.
        

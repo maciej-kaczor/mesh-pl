@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   
   get 'indexing/' => 'indexing#show'
   get 'indexing/performIndexing' => 'indexing#performIndexing'
+  get 'articles/search/:keyword' => 'articles#search'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

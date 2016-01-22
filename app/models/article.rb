@@ -4,7 +4,7 @@ class Article
   
   field :url, type: String
   field :content, type: String
-  embeds_many :keywords
+  has_many :keywords, class_name: 'Keyword', :autosave => true
   
   searchable do
     text :content

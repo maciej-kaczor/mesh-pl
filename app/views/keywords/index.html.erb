@@ -1,8 +1,11 @@
-		<div id="textbox1">
+ <div id="content">
+		Podaj słowo kluczowe
+</div>
+		<div>
 			<%= form_for :keyword, url: keywords_path do |f| %>
-				<%= f.label :content %>&nbsp;
-				<%= f.text_field :content %>&nbsp;
-				<%= f.submit 'Dodaj' %>
+				<!-- <%= f.label :content %>&nbsp; -->
+				<%= f.text_field :content, class:"textbox", value:"Słowo klucz" %>
+				<br><%= f.submit 'Dodaj', class:"button" %></br>
 			<% end %>
 		</div>
 		<div id="list">
@@ -17,5 +20,4 @@
 				<% end %>
 				</ul>
 			<% end %>
-		</div>					
-	</div>
+		</div>

@@ -4,6 +4,7 @@ class IndexingController < ApplicationController
   end
   
   def performIndexing
+    @kw = []
     articles = Article.all
     keywords = Keyword.all
     

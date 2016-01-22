@@ -26,7 +26,10 @@ class ArticlesController < ApplicationController
 		redirect_to articles_path, notice: "Adres URL został usunięty." and return
 	end
 	
-	
+	def search
+	  @keyword = params[:keyword]
+	  @articles = Article.where("keywords.keyword.content" =>@keyword)
+	end
 		
 
 
