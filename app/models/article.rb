@@ -4,7 +4,7 @@ class Article
   
   field :url, type: String
   field :content, type: String
-  embeds_many :keywords
+  field :keywords, type: Array
   
   searchable do
     text :content

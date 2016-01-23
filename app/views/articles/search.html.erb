@@ -1,0 +1,31 @@
+
+<div id="content">
+	Podaj słowo kluczowe, którego szukasz
+</div>
+
+<div>
+<%= form_for :article, url: articles_searchkeyword_path do |f| %>
+				<%= f.text_field :keywords, class:"textbox", value:"słowo" %>
+				<br><%= f.submit 'Wyszukaj', class:"button" %></br>
+<% end %>
+
+<div id="list">
+	<h1><%= @keyword %></h1>
+	<% if @articles.size == 0 %>
+		<h4>
+			Brak pasujących pozycji.
+		</h4>
+			
+		<% else %>
+	
+		<ul>
+	
+			<% @articles.each do |article| %>
+
+				<li><%= article.url %> </li>
+		</ul>
+	
+			<% end %>
+	<% end %>
+</div>
+

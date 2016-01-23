@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 		@newArticle.url = @pa[:url]
 		response = HTTParty.get(@newArticle.url, :verify => false)
 		@newArticle.content = response
+		@newArticle.keywords = []
 		
 		if @newArticle.save
 		  
@@ -26,8 +27,17 @@ class ArticlesController < ApplicationController
 		redirect_to articles_path, notice: "Adres URL został usunięty." and return
 	end
 	
-	
-		
-
+	def search
+	  @keyword = params[:keyword]
+	  @articles = Article.where("keywords" =>@keyword)
+	  
+	end	
+	def searchkeyword
+	  @keyword = params[:keyword]
+	  @articles = Article.where("keywords" =>@keyword)
+		session["#{keyword}_return_to"] = articles_search_path
+		#redirect_to action: "search", keyword: "dididi"
+		#redirect_to articles_search_path:@keyword
+	end
 
 end
