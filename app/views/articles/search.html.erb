@@ -4,24 +4,26 @@
 </div>
 
 <div>
-<%= form_for :article, url: articles_search_path do |f| %>
+<%= form_for :keyword, :url =>{ :action => "searchkeyword" } do |f| %>
 				<%= f.text_field :keyword, class:"textbox", value:"słowo" %>
 				<br><%= f.submit 'Wyszukaj', class:"button" %></br>
 <% end %>
 
 <div id="list">
-	<h1><%= @keyword %></h1>
+<!-- <h1><%= @keyword %></h1> -->
 	<% if @articles.size == 0 %>
 		<h4>
 			Brak pasujących pozycji.
 		</h4>
 			
 		<% else %>
-	
-		<ul>
+		<h4>
+			Artykuły,w których jest słowo kluczowe:
+		</h4>
+		
 	
 			<% @articles.each do |article| %>
-
+		<ul>
 				<li><%= article.url %> </li>
 		</ul>
 	

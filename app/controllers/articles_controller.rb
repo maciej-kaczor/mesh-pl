@@ -32,10 +32,11 @@ class ArticlesController < ApplicationController
 	  @keyword = params[:keyword]
 	  @articles = Article.where("keywords" =>@keyword)
 	   
-	 # if params[:keyword] != nil
-		#@keyword = params[:keyword]
-		#@articles = Article.where("keywords" =>@keyword)
-	  #end
+	  if params[:keyword] != nil
+		@keyword = params[:keyword]
+		@articles = Article.where("keywords" =>@keyword)
+	  end
+
 
 	end	
 	def searchkeyword
@@ -43,7 +44,7 @@ class ArticlesController < ApplicationController
 	  @articles = Article.where("keywords" =>@keyword)
 		#session["#{keyword}_return_to"] = articles_search_path
 		#redirect_to action: "search", keyword: "dididi"
-		redirect_to articles_search_path:@keyword
+		redirect_to articles_search_path(@keyword)
 
 	 
 	end
