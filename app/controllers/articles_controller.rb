@@ -28,8 +28,10 @@ class ArticlesController < ApplicationController
 	end
 	
 	def search
-	  @keyword = params[:keyword]
-	  @articles = Article.where("keywords" =>@keyword)
+	  if params[:keyword] != nil
+	   @keyword = params[:keyword]
+	   @articles = Article.where("keywords" =>@keyword)
+	  end
 	end
 		
 
