@@ -4,8 +4,8 @@
 </div>
 
 <div>
-<%= form_for :article, url: articles_searchkeyword_path do |f| %>
-				<%= f.text_field :keywords, class:"textbox", value:"słowo" %>
+<%= form_for :article, url: articles_search_path do |f| %>
+				<%= f.text_field :keyword, class:"textbox", value:"słowo" %>
 				<br><%= f.submit 'Wyszukaj', class:"button" %></br>
 <% end %>
 

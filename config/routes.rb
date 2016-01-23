@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get 'indexing/performIndexing' => 'indexing#performIndexing'
   
   get 'articles/search/' => 'articles#search'
-  post 'articles/searchkeyword' => 'articles#search'
+  post 'articles/search' => 'articles#searchkeyword'
   
   get 'articles/search/:keyword' => 'articles#search'
   
