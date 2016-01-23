@@ -10,11 +10,15 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'welcome/:sites' => 'welcome#sites'
 
+
   resources :keywords
   
   
   
   
+
+  get 'articles/' => 'articles#index'
+
   get 'indexing/' => 'indexing#show'
   get 'indexing/performIndexing' => 'indexing#performIndexing'
   
@@ -48,7 +52,9 @@ Rails.application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-
+  resources :keywords
+  
+  resources :articles
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
